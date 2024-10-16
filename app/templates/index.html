@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bigdataexam</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="navbar">
+    </div>
+    <center>
+        <h1>Breast Cancer Detection</h1>
+    </center>
+    <form action="{% url 'results' %}">
+        {% csrf_token %}
+        <div class="grid-container">
+            <div class="controls">
+                <label for="radius_mean">Radius Mean:</label>
+                <input type="number" id="radius_mean" name="radius_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="texture_mean">Texture Mean:</label>
+                <input type="number" id="texture_mean" name="texture_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="perimeter_mean">Perimeter Mean:</label>
+                <input type="number" id="perimeter_mean" name="perimeter_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="area_mean">Area Mean:</label>
+                <input type="number" id="area_mean" name="area_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="smoothness_mean">Smoothness Mean:</label>
+                <input type="number" id="smoothness_mean" name="smoothness_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="compactness_mean">Compactness Mean:</label>
+                <input type="number" id="compactness_mean" name="compactness_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="concavity_mean">Concavity Mean:</label>
+                <input type="number" id="concavity_mean" name="concavity_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="concave_points_mean">Concave Points Mean:</label>
+                <input type="number" id="concave_points_mean" name="concave_points_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="symmetry_mean">Symmetry Mean:</label>
+                <input type="number" id="symmetry_mean" name="symmetry_mean" step="any" required>
+            </div>
+            <div class="controls">
+                <label for="fractal_dimension_mean">Fractal Dimension Mean:</label>
+                <input type="number" id="fractal_dimension_mean" name="fractal_dimension_mean" step="any" required>
+            </div>
+        </div>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+
+</html>

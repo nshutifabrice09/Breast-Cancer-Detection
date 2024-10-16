@@ -1,0 +1,12 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diabetes Results</title>
+        <link rel="stylesheet" href="{% static 'css/results.css' %}">
+    </head>
+    <body>
+        <h1>Outcome: {{diagnosis}}</h1>
+        <a href="{% url 'home' %}">Click to go home</a>
+    </body>
+</html>
